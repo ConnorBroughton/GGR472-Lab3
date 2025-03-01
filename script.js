@@ -3,8 +3,8 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiY29ubm9yYnJvdWdodG9uIiwiYSI6ImNtNmllajk3dDA4M
 const map = new mapboxgl.Map({
     container: 'my-map',
     style: 'mapbox://styles/mapbox/streets-v12',
-    center: [-79.39, 43.66],
-    zoom: 12,
+    center: [-79.39, 43.71],
+    zoom: 10,
 });
 
 map.on('load', () => {
@@ -21,7 +21,8 @@ map.on('load', () => {
         'source-layer': 'crimes-5zigho', 
         paint: {
             'fill-color': 'blue',
-            'fill-opacity': 0.5 
+            'fill-opacity': 0.5,
+        filter: ['==', ['get', 'AREA_NAME']]
         }
     });
 });

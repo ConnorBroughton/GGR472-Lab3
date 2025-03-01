@@ -1,7 +1,7 @@
 .map-container {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    height: 100vh;
-    width: 100%;
+    top: 250;
+    bottom: 500;
+    height: 80dvh;
+    width: 60%;
 }
