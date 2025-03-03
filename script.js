@@ -6,7 +6,7 @@ const map = new mapboxgl.Map({
     center: [-79.39, 43.71],
     zoom: 10,
 });
-
+// these two lines add control options to the map on the screen
 map.addControl(new mapboxgl.NavigationControl());
 
 map.addControl(new mapboxgl.FullscreenControl());
@@ -17,12 +17,13 @@ map.on('load', () => {
         url: 'mapbox://connorbroughton.7vwajcfr'
     });
 
-    // Add the fill layer
+    // Adding the fill layer
     map.addLayer({
         id: 'crimes-data-poly',
         type: 'fill',
         source: 'crimes-data',
         'source-layer': 'crimes-5zigho',
+        // this part is specifically using the "HOMICIDE_2024 portion of the data"
         paint: {
             'fill-color': [
                 'interpolate',
@@ -49,7 +50,8 @@ map.on('load', () => {
             'line-width': 1,        // Outline thickness
         }
     });
-
+    
+    // here I have it set so when you click on a neighbourhood on the map, it shows you the attribute data
     map.on('click', 'crimes-data-poly', (e) => {
         const properties = e.features[0].properties;
         new mapboxgl.Popup()
