@@ -1,7 +1,52 @@
 .map-container {
     position: absolute;
-    top: 250;
-    bottom: 500;
-    height: 80dvh;
+    top: 1;
+    bottom: 0;
+    height: 94dvh;
     width: 60%;
+}
+
+.legend {
+    position: absolute;
+    background-color:aliceblue;
+    bottom: 0;
+    left: 5;
+    right: 5;
+    margin: 0 10px 30px 0;
+    padding: 12px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 200px;
+}
+
+.legend h4 {
+    margin: 0 0 10px;
+}
+
+.legend div {
+    margin-bottom: 5px;
+}
+
+.legend span {
+    display: inline-block;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    margin-right: 5px;
+}
+
+.legend div:nth-child(2) span {
+    background-color: #ffffcc;
+}
+
+.legend div:nth-child(3) span {
+    background-color: #ffeda0;
+}
+
+.legend div:nth-child(4) span {
+    background-color: #feb24c;
+}
+
+.legend div:nth-child(5) span {
+    background-color: #bd0026;
 }

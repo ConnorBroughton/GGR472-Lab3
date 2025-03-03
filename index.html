@@ -2,24 +2,24 @@
 <html lang="en" data-bs-theme="background-color: #e3f2fd;">
 
 
-
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">
-        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Utoronto_coa.svg/640px-Utoronto_coa.svg.png"
-                alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-        Toronto Crime</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" href="#">Something</a>
-        <!--Maybe figure out a way to make another map on this tab that displays police stations?-->
-        <a class="nav-item nav-link" href="#">Something Else</a>
-      </div>
+  <a class="navbar-brand" href="#">
+      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Utoronto_coa.svg/640px-Utoronto_coa.svg.png"
+              alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+      Toronto Homicides
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="https://www.torontopolice.on.ca" target="_blank">
+          Toronto Police Stations <i class="bi bi-box-arrow-up-right"></i>
+      </a>
     </div>
-  </nav>
+  </div>
+</nav>
 
 <head>
     <meta charset="UTF-8">
@@ -34,6 +34,14 @@
 <body>
     <div id="my-map" class="map-container"></div>
     <script src="script.js"></script>
+
+    <div id="homicide-legend" class="legend">
+      <h4>2024 Homicides</h4>
+      <div><span></span>0</div>
+      <div><span></span>1-2</div>
+      <div><span></span>3-4</div>
+      <div><span></span>5</div>
+    </div>
 </body>
 
 </html>
